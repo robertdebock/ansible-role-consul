@@ -10,5 +10,5 @@ consul_server: yes
 # consul_encrypt: "GEZzRM+2P+FiUcyrx9Fte8NbwtTlX3NA"
 # consul_retry_join:
 #   - consul.domain.internal
-consul_bind_addr: "{{ ansible_default_ipv4.address }}"
-consul_advertise_addr: "{{ ansible_default_ipv4.address }}"
+# consul_bind_addr: "{{ ansible_default_ipv4.address }}"
+# consul_advertise_addr: "{{ ansible_default_ipv4.address }}"
