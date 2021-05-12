@@ -4,7 +4,7 @@ Install and configure consul on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-consul/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-consul/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-consul/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-consul)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/consul)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/consul)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-consul.svg)](https://github.com/robertdebock/ansible-role-consul/releases/)|
+|[![github](https://github.com/robertdebock/ansible-role-consul/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-consul/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-consul/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-consul)|[![quality](https://img.shields.io/ansible/quality/54812)](https://galaxy.ansible.com/robertdebock/consul)|[![downloads](https://img.shields.io/ansible/role/d/54812)](https://galaxy.ansible.com/robertdebock/consul)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-consul.svg)](https://github.com/robertdebock/ansible-role-consul/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -84,6 +84,11 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 
 |container|tags|
 |---------|----|
+|amazon|Candidate|
+|debian|buster|
+|el|7, 8|
+|fedora|33, 34|
+|ubuntu|focal, bionic|
 
 The minimum version of Ansible required is 2.9, tests have been done to:
 
