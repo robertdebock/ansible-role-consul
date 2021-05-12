@@ -4,8 +4,8 @@
 
 # datacenter
 # This flag controls the datacenter in which the agent is running. If not provided,
-# it defaults to "dc1". Consul has first-class support for multiple datacenters, but 
-# it relies on proper configuration. Nodes in the same datacenter should be on a 
+# it defaults to "dc1". Consul has first-class support for multiple datacenters, but
+# it relies on proper configuration. Nodes in the same datacenter should be on a
 # single LAN.
 datacenter = "{{ consul_datacenter }}"
 
@@ -74,7 +74,7 @@ encrypt = "{{ consul_encrypt }}"
 {% endif %}
 
 # retry_join
-# Similar to -join but allows retrying a join until it is successful. Once it joins 
+# Similar to -join but allows retrying a join until it is successful. Once it joins
 # successfully to a member in a list of members it will never attempt to join again.
 # Agents will then solely maintain their membership via gossip. This is useful for
 # cases where you know the address will eventually be available. This option can be
@@ -95,3 +95,6 @@ encrypt = "{{ consul_encrypt }}"
 {% if consul_retry_join is defined %}
 retry_join = "[{% for item in consul_retry_join %}{{ item }}{% if not loop.last %},{% endif %}{% endfor %}]"
 {% endif %}
+
+bind_addr = "{{ consul_bind_addr }}"
+advertise_addr = "{{ consul_advertise_addr }}"

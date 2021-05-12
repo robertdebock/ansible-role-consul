@@ -61,3 +61,19 @@
     quiet: yes
   when:
     - consul_retry_join is defined
+
+- name: test if consul_bind_addr is set correctly
+  ansible.builtin.assert:
+    that:
+      - consul_bind_addr is string
+    quiet: yes
+  when:
+    - consul_bind_addr is defined
+
+- name: test if consul_advertise_addr is set correctly
+  ansible.builtin.assert:
+    that:
+      - consul_advertise_addr is string
+    quiet: yes
+  when:
+    - consul_advertise_addr is defined
