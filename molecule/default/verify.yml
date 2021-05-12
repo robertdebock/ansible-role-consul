@@ -38,7 +38,7 @@
         state: present
       notify:
         - remove dig
-      
+
     - name: lookup something
       ansible.builtin.command:
         cmd: "dig @127.0.0.1 -p 8600 machine.node.consul"
