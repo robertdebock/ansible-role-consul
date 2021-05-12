@@ -93,7 +93,7 @@ encrypt = "{{ consul_encrypt }}"
 #retry_join = ["provider=azure tag_name=... tag_value=... tenant_id=... client_id=... subscription_id=... secret_access_key=..."]
 #retry_join = ["provider=gce project_name=... tag_value=..."]
 {% if consul_retry_join is defined %}
-retry_join = "[{% for item in consul_retry_join %}{{ item }}{% if not loop.last %},{% endif %}{% endfor %}]"
+retry_join = [{% for item in consul_retry_join %}"{{ item }}"{% if not loop.last %},{% endif %}{% endfor %}]"
 {% endif %}
 
 {% if consul_bind_addr is defined %}
