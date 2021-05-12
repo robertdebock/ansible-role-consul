@@ -57,7 +57,7 @@
 - name: test if consul_retry_join is set correctly
   ansible.builtin.assert:
     that:
-      - consul_retry_join is iterable
+      - consul_retry_join is string
     quiet: yes
   when:
     - consul_retry_join is defined
