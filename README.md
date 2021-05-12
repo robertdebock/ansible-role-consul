@@ -52,9 +52,11 @@ consul_client_addr: 0.0.0.0
 consul_ui: yes
 consul_server: yes
 # consul_bootstrap_expect: 3
-# consul_encrypt: "GEZzRM+2P+FiUcyrx9Fte8NbwtTlX3NA/mbhIAna7u0="
+# consul_encrypt: "GEZzRM+2P+FiUcyrx9Fte8NbwtTlX3NA"
 # consul_retry_join:
 #   - consul.domain.internal
+consul_bind_addr: "{{ ansible_default_ipv4.address }}"
+consul_advertise_addr: "{{ ansible_default_ipv4.address }}"
 ```
 
 ## [Requirements](#requirements)
