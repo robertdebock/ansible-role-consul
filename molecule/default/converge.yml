@@ -1,0 +1,9 @@
+---
+- name: converge
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  roles:
+    - role: ansible-role-consul
+      consul_bootstrap_expect: 1

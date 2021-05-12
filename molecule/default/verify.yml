@@ -1,0 +1,50 @@
+---
+- name: Verify
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    _dig_package:
+      Alpine: bind-tools
+      Archlinux: dnsutils
+      Debian: dnsutils
+      RedHat: bind-utils
+    dig_package: "{{ _dig_package[ansible_os_family] }}"
+
+
+  tasks:
+    - name: check if connection still works
+      ansible.builtin.ping:
+
+    - name: check if consul can run
+      ansible.builtin.command:
+        cmd: consul --version
+
+    - name: check consul members
+      ansible.builtin.command:
+        cmd: consul members
+      register: consul_check_members
+      failed_when:
+        - '"alive" not in consul_check_members.stdout'
+
+    - name: check nodes in the catalog
+      ansible.builtin.uri:
+        url: "http://localhost:8500/v1/catalog/nodes"
+
+    - name: install dig
+      package:
+        name: "{{ dig_package }}"
+        state: present
+      notify:
+        - remove dig
+      
+    - name: lookup something
+      ansible.builtin.command:
+        cmd: "dig @127.0.0.1 -p 8600 machine.node.consul"
+
+  handlers:
+    - name: remove dig
+      package:
+        name: "{{ dig_package }}"
+        state: absent
