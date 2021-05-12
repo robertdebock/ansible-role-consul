@@ -50,6 +50,7 @@
       - consul_encrypt is string
       - consul_encrypt | length == 32
     quiet: yes
+    fail_msg: "consul_encrypt must be 32 characters, it's {{ consul_encrypt | length }}."
   when:
     - consul_encrypt is defined
 
