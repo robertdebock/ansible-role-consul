@@ -33,7 +33,7 @@
         url: "http://localhost:8500/v1/catalog/nodes"
 
     - name: install dig
-      package:
+      ansible.builtin.package:
         name: "{{ dig_package }}"
         state: present
       notify:
@@ -45,6 +45,6 @@
 
   handlers:
     - name: remove dig
-      package:
+      ansible.builtin.package:
         name: "{{ dig_package }}"
         state: absent
