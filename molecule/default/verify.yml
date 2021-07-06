@@ -9,7 +9,8 @@
       Alpine: bind-tools
       Archlinux: dnsutils
       Debian: dnsutils
-      RedHat: bind-utils
+      RedHat: &redhat_dig_package bind-utils
+      Rocky: *redhat_dig_package
     dig_package: "{{ _dig_package[ansible_os_family] }}"
 
 
