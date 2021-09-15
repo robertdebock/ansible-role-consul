@@ -113,9 +113,9 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 |container|tags|
 |---------|----|
 |amazon|Candidate|
-|debian|bullseye|
-|el|7, 8|
-|fedora|33, 34|
+|debian|all|
+|el|all|
+|fedora|all|
 |ubuntu|all|
 
 The minimum version of Ansible required is 2.9, tests have been done to:
