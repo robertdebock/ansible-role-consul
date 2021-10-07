@@ -38,6 +38,8 @@ jobs:
           - image: "debian"
             tag: "latest"
           - image: "centos"
+            tag: "7"
+          - image: "centos"
             tag: "latest"
           - image: "fedora"
             tag: "33"
