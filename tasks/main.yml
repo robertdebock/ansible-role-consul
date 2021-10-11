@@ -33,4 +33,4 @@
   ansible.builtin.service:
     name: consul
     state: started
-    enabled: true
+    enabled: yes

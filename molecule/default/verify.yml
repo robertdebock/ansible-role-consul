@@ -13,7 +13,6 @@
       Rocky: *redhat_dig_package
     dig_package: "{{ _dig_package[ansible_os_family] }}"
 
-
   tasks:
     - name: check if connection still works
       ansible.builtin.ping:
@@ -45,6 +44,7 @@
         cmd: "dig @127.0.0.1 -p 8600 machine.node.consul"
 
   handlers:
+
     - name: remove dig
       ansible.builtin.package:
         name: "{{ dig_package }}"
