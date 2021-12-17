@@ -57,7 +57,7 @@ consul_client_addr: "0.0.0.0"
 consul_ui: yes
 
 # This flag is used to control if an agent is in server or client mode.
-consul_server: yes
+consul_server: no
 
 # This flag provides the number of expected servers in the datacenter.
 # consul_bootstrap_expect: 3
