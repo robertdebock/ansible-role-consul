@@ -75,8 +75,8 @@ consul_server: no
 # The advertise address is used to change the address that we advertise to other nodes in the cluster.
 # consul_advertise_addr: "{{ ansible_default_ipv4.address }}"
 
-# You can define additional configuration files for Consul
-# consul_config:
+# You can define additional configuration options for Consul
+# consul_extra_config:
 #   ports:
 #     dns: 53
 

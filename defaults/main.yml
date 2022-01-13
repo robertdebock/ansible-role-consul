@@ -33,7 +33,7 @@ consul_server: no
 # consul_advertise_addr: "{{ ansible_default_ipv4.address }}"
 
 # You can define additional configuration files for Consul
-# consul_config:
+# consul_extra_config:
 #   ports:
 #     dns: 53
 
