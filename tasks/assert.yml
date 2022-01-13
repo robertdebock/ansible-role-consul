@@ -77,6 +77,14 @@
   when:
     - consul_advertise_addr is defined
 
+- name: test if consul_config is set correctly
+  ansible.builtin.assert:
+    that:
+      - consul_config is mapping
+    quiet: yes
+  when:
+    - consul_config is defined
+
 - name: test if consul_services is set correctly
   ansible.builtin.assert:
     that:

@@ -29,10 +29,20 @@
     modification_time: preserve
     access_time: preserve
 
-- name: configure consul
+- name: configure consul defaults
   ansible.builtin.template:
     src: consul.hcl.j2
     dest: /etc/consul.d/consul.hcl
+    owner: consul
+    group: consul
+    mode: "0644"
+  notify:
+    - restart consul
+
+- name: configure consul extras
+  ansible.builtin.copy:
+    dest: /etc/consul.d/consul.json
+    content: "{{ consul_config | to_nice_json }}"
     owner: consul
     group: consul
     mode: "0644"
