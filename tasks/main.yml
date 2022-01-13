@@ -48,6 +48,8 @@
     mode: "0644"
   notify:
     - restart consul
+  when:
+    - consul_extra_config is defined
 
 - name: configure consul service
   ansible.builtin.template:
