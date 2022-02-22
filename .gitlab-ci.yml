@@ -1,5 +1,5 @@
 ---
-image: "robertdebock/github-action-molecule:3.3.1"
+image: "robertdebock/github-action-molecule:4.0.6"
 
 services:
   - docker:dind
@@ -20,9 +20,9 @@ molecule:
         tag: "latest"
       - image: "debian"
         tag: "latest"
-      - image: "centos"
+      - image: "enterpriselinux"
         tag: "7"
-      - image: "centos"
+      - image: "enterpriselinux"
         tag: "latest"
       - image: "fedora"
         tag: "34"
