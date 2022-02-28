@@ -44,6 +44,10 @@ The default values for the variables are set in `defaults/main.yml`:
 ---
 # defaults file for consul
 
+# You can install consule using a package in this role. If you have installed
+# consul manually, set this to `no`.
+consule_install_package: yes
+
 # This flag controls the datacenter in which the agent is running.
 consul_datacenter: dc1
 
