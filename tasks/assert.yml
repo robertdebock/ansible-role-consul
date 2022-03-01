@@ -1,10 +1,10 @@
 ---
 
-- name: test if consule_install_package is set correctly
+- name: test if consul_install_package is set correctly
   ansible.builtin.assert:
     that:
-      - consule_install_package is defined
-      - consule_install_package is boolean
+      - consul_install_package is defined
+      - consul_install_package is boolean
     quiet: yes
 
 - name: test if consul_datacenter is set correctly
