@@ -54,9 +54,9 @@
   ansible.builtin.assert:
     that:
       - consul_encrypt is string
-      - consul_encrypt | length == 32
+      - consul_encrypt | length == 44
     quiet: yes
-    fail_msg: "consul_encrypt must be 32 characters, it's {{ consul_encrypt | length }}."
+    fail_msg: "consul_encrypt must be a 32-byte key encoded with base64 resulting in 44 characters, but it's {{ consul_encrypt | length }}."
   when:
     - consul_encrypt is defined
 
