@@ -37,14 +37,13 @@
         name: "{{ dig_package }}"
         state: present
       notify:
-        - remove dig
+        - Remove dig
 
     - name: Lookup something
       ansible.builtin.command:
         cmd: "dig @127.0.0.1 -p 8600 machine.node.consul"
 
   handlers:
-
     - name: Remove dig
       ansible.builtin.package:
         name: "{{ dig_package }}"
