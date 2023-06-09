@@ -12,6 +12,7 @@
     that:
       - consul_datacenter is defined
       - consul_datacenter is string
+      - consul_datacenter is not none
     quiet: yes
 
 - name: assert | Test if consul_data_dir is set correctly
@@ -19,6 +20,7 @@
     that:
       - consul_data_dir is defined
       - consul_data_dir is string
+      - consul_data_dir is not none
     quiet: yes
 
 - name: assert | Test if consul_client_addr is set correctly
@@ -26,6 +28,7 @@
     that:
       - consul_client_addr is defined
       - consul_client_addr is string
+      - consul_client_addr is not none
     quiet: yes
 
 - name: assert | Test if consul_ui is set correctly
@@ -72,6 +75,7 @@
   ansible.builtin.assert:
     that:
       - consul_bind_addr is string
+      - consul_bind_addr is not none
     quiet: yes
   when:
     - consul_bind_addr is defined
@@ -80,6 +84,7 @@
   ansible.builtin.assert:
     that:
       - consul_advertise_addr is string
+      - consul_advertise_addr is not none
     quiet: yes
   when:
     - consul_advertise_addr is defined
@@ -97,6 +102,7 @@
     that:
       - item.name is defined
       - item.name is string
+      - item.name is not none
       - item.port is defined
       - item.port is number
       - item.port > 0
