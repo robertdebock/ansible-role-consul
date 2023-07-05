@@ -111,3 +111,5 @@
   when:
     - consul_services is defined
   loop: "{{ consul_services }}"
+  loop_control:
+    label: "{{ item.name }}"
