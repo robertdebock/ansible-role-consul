@@ -6,7 +6,7 @@
 consul_install_package: yes
 
 # This flag controls the datacenter in which the agent is running.
-consul_datacenter: dc1
+consul_datacenter: my-dc-1
 
 # This flag provides a data directory for the agent to store state.
 consul_data_dir: /opt/consul
