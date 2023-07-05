@@ -49,6 +49,8 @@
     group: consul
     mode: "0644"
   loop: "{{ consul_services }}"
+  loop_control:
+    label: "{{ item.name }}"
   notify:
     - Restart consul
   when:
