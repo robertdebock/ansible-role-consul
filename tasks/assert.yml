@@ -106,7 +106,7 @@
       - item.port is defined
       - item.port is number
       - item.port > 0
-      - item.port =< 65536
+      - item.port <= 65536
     quiet: yes
   when:
     - consul_services is defined
