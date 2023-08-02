@@ -15,7 +15,7 @@ molecule:
       - image: "amazonlinux"
         tag: "latest"
       - image: "debian"
-        tag: "latest"
+        tag: "bullseye"
       - image: "enterpriselinux"
         tag: "7"
       - image: "enterpriselinux"
