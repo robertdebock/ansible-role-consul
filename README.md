@@ -1,4 +1,4 @@
-# Ansible role [consul](#consul)
+# [Ansible role consul](#consul)
 
 Install and configure consul on your system.
 
