@@ -58,6 +58,9 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 # consul manually, set this to `false`.
 consul_install_package: true
 
+# Consul requires a license. Without setting a license (or an empty license), some steps are skipped.
+consul_license: ""
+
 # This flag controls the datacenter in which the agent is running.
 consul_datacenter: my-dc-1
 
