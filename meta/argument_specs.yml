@@ -59,17 +59,6 @@ argument_specs:
         type: "list"
         elements: "dict"
         description: "You can define service that Consul should manage."
-        suboptions:
-          name:
-            type: "str"
-            description: "The name of the service."
-          tags:
-            type: "list"
-            elements: "str"
-            description: "The tags of the service."
-          port:
-            type: "int"
-            description: "The port of the service."
       consule_service_started_and_enabled:
         type: "bool"
         default: true
