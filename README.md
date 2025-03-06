@@ -18,7 +18,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   gather_facts: false
 
   roles:
-    - role: robertdebock.consul
+    - role: ansible-role-consul
       consul_bootstrap_expect: 1
       consul_encrypt: "6r73CP0icJrap1tsQ17yuqzVguho4/yz+aI/dkVg2Kk="
       consul_bind_addr: "0.0.0.0"
