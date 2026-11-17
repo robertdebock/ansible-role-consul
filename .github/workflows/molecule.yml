@@ -41,7 +41,7 @@ jobs:
           - image: "enterpriselinux"
             tag: "latest"
           - image: "fedora"
-            tag: "latest"
+            tag: "44"
           - image: "ubuntu"
             tag: "latest"
           - image: "ubuntu"
